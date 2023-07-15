@@ -676,40 +676,88 @@ body {
   pointer-events: none;
 }
 
-.github-btn {
-  position: absolute;
-  right: 40px;
-  bottom: 50px;
-  text-decoration: none;
-  padding: 15px 25px;
-  border-radius: 4px;
-  box-shadow: 0px 4px 30px -6px rgba(36, 52, 70, 0.65);
-  background: #24292e;
+nav {
+  position: relative;
+  top: -100px;
+  margin: 270px auto 0;
+  width: 590px;
+  height: 50px;
+  background: #34495e;
+  border-radius: 8px;
+  font-size: 0;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+  font-size: 15px;
+  text-transform: uppercase;
   color: #fff;
-  font-weight: bold;
-  letter-spacing: 1px;
-  font-size: 16px;
+  text-decoration: none;
+  line-height: 50px;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
   text-align: center;
-  transition: all 0.3s ease-in-out;
 }
 
-@media screen and (min-width: 500px) {
-  .github-btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 17px 20px -6px rgba(36, 52, 70, 0.36);
-  }
+nav .animation {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  z-index: 0;
+  background: #1abc9c;
+  border-radius: 8px;
+  transition: all;
+  -webkit-transition: all .5s ease 0s;
+
 }
 
-@media screen and (max-width: 700px) {
-  .github-btn {
-    position: relative;
-    bottom: auto;
-    right: auto;
-    margin-top: 20px;
-  }
+a:nth-child(1) {
+  width: 100px;
+}
 
-  .github-btn:active {
-    transform: scale(1.1);
-    box-shadow: 0px 17px 20px -6px rgba(36, 52, 70, 0.36);
-  }
+nav .start-home,
+a:nth-child(1):hover~.animation {
+  width: 100px;
+  left: 0;
+}
+
+a:nth-child(2) {
+  width: 110px;
+}
+
+nav .start-about,
+a:nth-child(2):hover~.animation {
+  width: 110px;
+  left: 100px;
+}
+
+a:nth-child(3) {
+  width: 100px;
+}
+
+nav .start-home,
+a:nth-child(3):hover~.animation {
+  width: 100px;
+  left: 210px;
+}
+
+a:nth-child(4) {
+  width: 160px;
+}
+
+nav .start-portfolio,
+a:nth-child(4):hover~.animation {
+  width: 160px;
+  left: 310px;
+}
+
+a:nth-child(5) {
+  width: 120px;
+}
+
+nav .start-contact,
+a:nth-child(5):hover~.animation {
+  width: 120px;
+  left: 470px;
 }
