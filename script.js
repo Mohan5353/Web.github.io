@@ -17,6 +17,6 @@ sub_1.addEventListener('click', function () {
     var email = document.getElementById('logemail').value,
         password = document.getElementById('logpass').value;
     if (password == "1234" && email == "test@xyzmail.com") {
-        window.location.href = "/Welcome/index.html";
+        window.location.href = "Button.html";
     }
 });
